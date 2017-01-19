@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+        {% block head %}
+        <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+        <meta charset="utf-8" />
+
+        <link href="{{ SITEURL }}/theme/css/bootstrap.css"      rel="stylesheet" type="text/css">
+        <link href="{{ SITEURL }}/theme/css/main.css"           rel="stylesheet" type="text/css">
+
+        <link href="{{ SITEURL }}/theme/css/cosmo.css"          rel="stylesheet" type="text/css">
+        <link href="{{ SITEURL }}/theme/css/font-awesome.css"   rel="stylesheet" type="text/css"/>
+        <link href="{{ SITEURL }}/theme/css/pygment.css"        rel="stylesheet" type="text/css"/>
+
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic"
+              rel="stylesheet" type="text/css"/>
+        <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
+              rel="stylesheet" type="text/css"/>
+
+        {% block head_scripts %}{% endblock head_scripts %}
+
+        {% endblock head %}
+</head>
+
+<body id="index" class="home">
+
+<div class="container" id="bodycontainer">
+
+    <div class="container">
+        <h1><a href="{{SITEURL}}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+        <hr />
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+
+    <footer>
+    </footer><!-- /#contentinfo -->
+
+</body>
+</html>

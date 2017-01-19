@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% set mytitle="sometitle" %}
+
+{% block title %}
+{{ mytitle }}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+
+<style>
+    img.index_img {
+        width: 500px;
+        border-style: solid;
+        border-color: #ddd;
+        border-width: thin;
+    }
+    a.index_btn {
+        margin-top: 10px;
+    }
+    div.row {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+</style>
+
+<div class="container">
+<div class="row">
+
+<h2><b>Javascript Visualizations</b></h2>
+
+<p class="lead">This page contains visualizations of data using Javascript.</p>
+
+
+
+</div>
+<div class="row">
+
+
+
+<p>&nbsp;</p>
+
+<h2><b>Basic Visualizations</b></h2>
+
+<p class="lead">These pages demonstrate basic visualizations and chart types 
+using a range of different Javascript libraries. 
+</p>
+<p><a class="index_btn btn btn-large btn-primary" href="visualizations.html">Basic Visualizations
+</a></p>
+
+
+
+
+</div>
+
+{% endblock %}
+
