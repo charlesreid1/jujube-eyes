@@ -29,24 +29,4 @@ var chart = c3.generate({
     }
 });
 
-/*
-fetch('http://jsonplaceholder.typicode.com/users')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(users) {
-    var data = {
-      labels: users.map(function(user) {
-        return user.name;
-      }),
-      series: users.map(function(user) {
-        return user.name.length;
-      })
-    };
-  
-    var chart = new Chartist.Bar('#chart', data, {
-      distributeSeries: true
-    });
-  });
-*/
 

@@ -13,8 +13,8 @@ AUTHOR = u'charlesreid1'
 SITENAME = u'Red Heifer'
 SITETAGLINE = "death "*20
 
-#SITEURL = ''
-SITEURL = '/red-heifer'
+SITEURL = ''
+#SITEURL = '/red-heifer'
 
 PATH = 'content'
 
@@ -53,12 +53,30 @@ EXTRA_TEMPLATES_PATHS = {}
 
 EXTRA_TEMPLATES_PATHS = ['jviz']
 
-TEMPLATE_PAGES['visualizations.html'] = 'visualizations.html'
+TEMPLATE_PAGES['visualization1.html']   = 'visualization1.html'
+TEMPLATE_PAGES['visualization1.css']    = 'visualization1.css'
+TEMPLATE_PAGES['visualization1.js']     = 'visualization1.js'
 
-TEMPLATE_PAGES['visualization1.html'] = 'visualization1.html'
-TEMPLATE_PAGES['visualization1.css'] = 'visualization1.css'
-TEMPLATE_PAGES['visualization1.js'] = 'visualization1.js'
+TEMPLATE_PAGES['visualization2.json']   = 'visualization2.json'
+TEMPLATE_PAGES['visualization2.html']   = 'visualization2.html'
+TEMPLATE_PAGES['visualization2.css']    = 'visualization2.css'
+TEMPLATE_PAGES['visualization2.js']     = 'visualization2.js'
 
+TEMPLATE_PAGES['visualization3.json']   = 'visualization3.json'
+TEMPLATE_PAGES['visualization3.html']   = 'visualization3.html'
+TEMPLATE_PAGES['visualization3.css']    = 'visualization3.css'
+TEMPLATE_PAGES['visualization3.js']     = 'visualization3.js'
+
+TEMPLATE_PAGES['visualization4.json']   = 'visualization4.json'
+TEMPLATE_PAGES['visualization4.html']   = 'visualization4.html'
+TEMPLATE_PAGES['visualization4.css']    = 'visualization4.css'
+TEMPLATE_PAGES['visualization4.js']     = 'visualization4.js'
+
+TEMPLATE_PAGES['chartdata_all.json']   = 'chartdata_all.json'
+#TEMPLATE_PAGES['visualization5.json']   = 'visualization5.json'
+TEMPLATE_PAGES['visualization5.html']   = 'visualization5.html'
+TEMPLATE_PAGES['visualization5.css']    = 'visualization5.css'
+TEMPLATE_PAGES['visualization5.js']     = 'visualization5.js'
 
 
 
