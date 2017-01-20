@@ -65,15 +65,21 @@ $(document).ready(function () {
     // This function is called on button clicks,
     // and once when the page is loaded.
     //
-    var filter_data = function(code, jsonData, barChart) {
+    var filter_data = function(jsonData, barChart) {
+        /*
+         * This uses codes_, a global list of codes to plot,
+         * to know what to plot. No "codes" parameter required.
+         * Stupid and reckless, I know.
+         */
 
         // here, jsonData is the whole enchilada
         //
         //console.log('in filter_data with this code and chart data:');
         //console.log(code);
 
-        console.log("from filter_data:");
-        console.log(codes_);
+        //console.log("from filter_data:");
+        //console.log(codes_);
+
         var indexes = [];
         for(var c in codes_){
             var thecode = codes_[c];
@@ -111,6 +117,9 @@ $(document).ready(function () {
 
         }
 
+        console.log('formatting bar data');
+        console.log(codes_);
+        console.log(myBarData);
         var barDataFmt = multiple_key_value_json_to_c3bar_json(codes_,myBarData);
 
         barChart.load({
@@ -151,7 +160,7 @@ $(document).ready(function () {
         // Button state: active/inactive
         if( classList.contains("active") ) {
 
-            console.log("Button is active");
+            console.log("Button a#btn_"+code+" is active");
             // if this button is active,
             // make this button inactive
             // 
@@ -161,7 +170,7 @@ $(document).ready(function () {
 
         } else {
 
-            console.log("Button is inactive");
+            console.log("Button a#btn_"+code+" is inactive");
             // if this button is inactive,
             // make this button active
             //
@@ -174,14 +183,10 @@ $(document).ready(function () {
 
         }
 
-        //console.log('about to call filter_data with this code:');
-        //console.log(code);
-
         // now that we have the code, 
         // filter the data 
         // pass it off to a chart builder
-        filter_data(code, jsonData, barChart);
-        console.log("Filter data");
+        filter_data(jsonData, barChart);
 
     }
 
@@ -263,7 +268,11 @@ $(document).ready(function () {
 
         // Now we assemble the column for each bar label,
         // by extracting the appropriate value from each Object.
-        console.log('Extracting bar columns...');
+        //
+        // myBarData is an array of Objects (dictionaries)
+        //
+        //console.log('Extracting bar columns...');
+        //console.log(myBarData);
 
         // barLabels contains labels for each category (second, 
         // nested dimension of the of data)
@@ -271,8 +280,11 @@ $(document).ready(function () {
         // whichCodes contains codes to include on the plot.
         // extract this data.
         
+        console.log('extracting whichCodes');
         for(var c in whichCodes) {
             var theCode = whichCodes[c];
+            console.log(theCode);
+
             for( var b in myBarData ) {
                 var theBarData = myBarData[b];
                 console.log(theBarData);
@@ -303,10 +315,10 @@ $(document).ready(function () {
 
             barColumns.push(thisColumn);
         }
-        */
         console.log(barColumns);
+        */
 
-        return barColumns;
+        return ;
 
     }
 
@@ -389,7 +401,7 @@ $(document).ready(function () {
             // Filter data and make bar charts
             // for the first code.
             //
-            filter_data(firstCode, chartData, barChart);
+            filter_data(chartData, barChart);
 
 
 
