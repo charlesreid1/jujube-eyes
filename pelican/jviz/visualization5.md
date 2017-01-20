@@ -1,30 +1,11 @@
-<h2>Bar Chart: JSON</h2>
+<h2>Button-Chart Linking</h2>
 
-This multiple-series bar chart is created with C3.js. This turns a key-value dictionary 
-into properly-formatted column-major data.
+In this chart, we load external JSON data and use it to create buttons.
+Those buttons call functions that filter the data,
+and show that particular code in the bar chart.
 
-We start with data that looks like this:
+The data being plotted are manners of death for different ICD 10 codes.
 
-<pre>
-{
-    "Country 1" : [ 6, 5.95, 6.69, 7.47, 3.53, 0.92, 7.21, 4.02, 3.97, 4.18, 4.27],
-    "Country 2" : [ 7.45, 7.31, 8.69, 8.74, 5.7, -6.15, 4.4, 4.67, 3.8, 2.02, 3.04],
-    "Country 3" : [ 3.82, 3.06, 2.56, 4.43, 2.2, 1.23, 2.53, 2.4, 3.53, 2.62, 2.58],
-    "Country 4" : [ 7.58, 8.57, 8.24, 7.54, 4.69, 3.68, 7.62, 6.55, 3.64, 4.02, 4.63],
-    "Country 5" : [ 6.48, 5.78, 6.1, 6.51, 4.27, 1.15, 8.04, 4.57, 5.51, 4.99, 5.1]
-}
-</pre>
+This chart needs improving by adding on/off state for buttons,
+and adding multiple ICD 10 codes for inter-comparison.
 
-We parse it using Javascript so it looks like this:
-
-<pre>
-data : {
-    columns: [
-                [ "Country 1", 6, 5.95, 6.69, 7.47, 3.53, 0.92, 7.21, 4.02, 3.97, 4.18, 4.27],
-                [ "Country 2", 7.45, 7.31, 8.69, 8.74, 5.7, -6.15, 4.4, 4.67, 3.8, 2.02, 3.04],
-                [ "Country 3", 3.82, 3.06, 2.56, 4.43, 2.2, 1.23, 2.53, 2.4, 3.53, 2.62, 2.58],
-                [ "Country 4", 7.58, 8.57, 8.24, 7.54, 4.69, 3.68, 7.62, 6.55, 3.64, 4.02, 4.63],
-                [ "Country 5", 6.48, 5.78, 6.1, 6.51, 4.27, 1.15, 8.04, 4.57, 5.51, 4.99, 5.1]
-    ]
-}
-</pre>

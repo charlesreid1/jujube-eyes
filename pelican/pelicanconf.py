@@ -78,6 +78,11 @@ TEMPLATE_PAGES['visualization5.html']   = 'visualization5.html'
 TEMPLATE_PAGES['visualization5.css']    = 'visualization5.css'
 TEMPLATE_PAGES['visualization5.js']     = 'visualization5.js'
 
+#TEMPLATE_PAGES['visualization6.json']   = 'visualization6.json'
+TEMPLATE_PAGES['visualization6.html']   = 'visualization6.html'
+TEMPLATE_PAGES['visualization6.css']    = 'visualization6.css'
+TEMPLATE_PAGES['visualization6.js']     = 'visualization6.js'
+
 
 
 #TEMPLATE_PAGES['stuff.html'] = 'stuff.html'
