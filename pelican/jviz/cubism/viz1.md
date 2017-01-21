@@ -1,8 +1,7 @@
 <h2>Cubism Time Series</h2>
 
-In this chart, we load external JSON data that has been generated
-using a smartphone sensor time series data set, and visualize 
-various time series from the smartphone. 
+In this chart, we generate two random series, and visualize their 
+difference using a Cubism comparison chart. 
 
 These visualizations are solely intended to demonstrate how to use Cubism.
 

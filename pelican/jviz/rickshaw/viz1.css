@@ -1,0 +1,7 @@
+/*-- Chart --*/
+
+#example1 { min-height: 155px; }
+
+.domain {
+    visibility: hidden;
+}
