@@ -1,0 +1,7 @@
+/* to take priority over rickshaw.css,
+ * this needs to come before rickshaw.css
+ * in the html file
+ */
+div.title {
+    color: #ddd;
+}

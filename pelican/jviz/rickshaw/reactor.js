@@ -67,7 +67,13 @@ $(document).ready(function () {
                 data: seriesData[6],
                 name: 'O2'
             }
-        ]
+        ],
+        onComplete: function(transport) {
+            console.log('all finished!');
+            //var graph = transport.graph;
+            //var detail = new Rickshaw.Graph.HoverDetail({ graph: graph });
+        }
+        
     } );
     
     graph.render();
