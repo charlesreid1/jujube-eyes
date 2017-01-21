@@ -19,7 +19,7 @@ $(document).ready(function () {
     // ----------------
     // Colors
 
-    var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
+    var palette = new Rickshaw.Color.Palette( { scheme: 'spectrum2001' } );
 
 
 
@@ -31,10 +31,11 @@ $(document).ready(function () {
 
     var graph = new Rickshaw.Graph( {
         element: document.getElementById("reactor"),
-        width: 900,
-        height: 500,
+        width: 400,
+        height: 200,
         renderer: 'area',
         stroke: true,
+        offset: 'expand',
         preserve: true,
         series: [
             {
@@ -168,7 +169,7 @@ $(document).ready(function () {
         random.addData(seriesData);
         graph.update();
     
-    }, 3000 );
+    }, 90000 );
     
     /*
     function addAnnotation(force) {
@@ -177,10 +178,10 @@ $(document).ready(function () {
             annotator.update();
         }
     }
-    */
-    
     addAnnotation(true);
+    
     setTimeout( function() { setInterval( addAnnotation, 6000 ) }, 6000 );
+    */
     
     var previewXAxis = new Rickshaw.Graph.Axis.Time({
         graph: preview.previews[0],
