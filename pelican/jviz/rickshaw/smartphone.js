@@ -36,7 +36,7 @@ $(document).ready(function () {
             // spectrum2000
             // spectrum2001
             //
-            var palette = new Rickshaw.Color.Palette( { scheme: 'cool' } );
+            var palette = new Rickshaw.Color.Palette( { scheme: 'spectrum14' } );
 
 
 
@@ -47,8 +47,6 @@ $(document).ready(function () {
             // instantiate our graph!
             //
 
-
-            console.log(chartData);
 
             var graph = new Rickshaw.Graph( {
                 element: document.getElementById("smartphone"),
@@ -63,7 +61,7 @@ $(document).ready(function () {
                         color: palette.color(),
                         data: chartData,
                         name: 'smartphone'
-                    }
+                    },
                 ],
                 onComplete: function(transport) {
                     console.log('all finished!');

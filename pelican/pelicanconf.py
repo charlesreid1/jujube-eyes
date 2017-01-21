@@ -117,9 +117,11 @@ TEMPLATE_PAGES['rickshaw/smartphone.html']   = 'rickshaw/smartphone.html'
 TEMPLATE_PAGES['rickshaw/smartphone.css']    = 'rickshaw/smartphone.css'
 TEMPLATE_PAGES['rickshaw/smartphone.js']     = 'rickshaw/smartphone.js'
 
-TEMPLATE_PAGES['rickshaw/smartload.html']   = 'rickshaw/smartload.html'
-TEMPLATE_PAGES['rickshaw/smartload.css']    = 'rickshaw/smartload.css'
-TEMPLATE_PAGES['rickshaw/smartload.js']     = 'rickshaw/smartload.js'
+TEMPLATE_PAGES['rickshaw/rickshaw_cpuall.json']   = 'rickshaw/rickshaw_cpuall.json'
+
+TEMPLATE_PAGES['rickshaw/stack.html']   = 'rickshaw/stack.html'
+TEMPLATE_PAGES['rickshaw/stack.css']    = 'rickshaw/stack.css'
+TEMPLATE_PAGES['rickshaw/stack.js']     = 'rickshaw/stack.js'
 
 
 

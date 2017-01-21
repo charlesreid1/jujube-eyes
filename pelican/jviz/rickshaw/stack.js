@@ -1,82 +1,7 @@
 $(document).ready(function () {
 
 
-    // ----------------
-    // Empty Chart
-    //
-    // Start with an empty chart, since this data will take a while to load
-
-    // ----------------
-    // Colors
-    //
-    //
-    // classic9
-    // colorwheel
-    // cool
-    // munin
-    // spectrum14
-    // spectrum2000
-    // spectrum2001
-    //
-    var palette = new Rickshaw.Color.Palette( { scheme: 'cool' } );
-
-
-    // ----------------
-    // Graph
-    //
-    // instantiate our graph!
-    //
-
-    var graph = new Rickshaw.Graph.JSONP({
-
-            element: document.getElementById("smartload"),
-            width: 800,
-            height: 100,
-            renderer: 'area',
-            stroke: true,
-
-            /*offset: 'expand',*/
-            preserve: true,
-            dataURL : 'rickshaw/rickshaw_totalcpu.json',
-            onData: function(d) {
-                    d[0].data[0].y += 1;
-                    return d;
-            },
-            onComplete: function(transport) {
-                console.log('all finished!');
-                //var graph = transport.graph;
-                //var detail = new Rickshaw.Graph.HoverDetail({ graph: graph });
-            }
-                
-        } );
-
-
-
-    var ticksTreatment = 'glow';
-    
-    var xAxis = new Rickshaw.Graph.Axis.Time( {
-        graph: graph,
-        ticksTreatment: ticksTreatment,
-        timeFixture: new Rickshaw.Fixtures.Time.Local()
-    } );
-
-    xAxis.render();
-
-    var yAxis = new Rickshaw.Graph.Axis.Y( {
-        graph: graph,
-        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
-        ticksTreatment: ticksTreatment
-    } );
-
-    yAxis.render();
-
-
-
-
-    graph.render();
-
-
-    // ----------------
+    ///////////////////////
     // Data 
 
     // set up our data series with 150 random data points
@@ -89,8 +14,7 @@ $(document).ready(function () {
     }
     */
 
-    /*
-    fetch('rickshaw_totalcpu.json')
+    fetch('rickshaw_cpuall.json')
 
         .then(function(response) {
 
@@ -99,22 +23,84 @@ $(document).ready(function () {
         })
         .then(function(chartData) {
 
-            console.log("Loaded chart data.");
-            console.log(chartData.length);
 
-            graph.series = [{ 
+            ///////////////////////
+            // Colors
+            //
+            //
+            // classic9
+            // colorwheel
+            // cool
+            // munin
+            // spectrum14
+            // spectrum2000
+            // spectrum2001
+            //
+            var palette = new Rickshaw.Color.Palette( { scheme: 'spectrum14' } );
+
+
+
+
+            ///////////////////////
+            // Series labels
+            // 
+            var seriesLabels = Object.keys(chartData).sort();
+            var seriesData = [];
+
+            for(var i in seriesLabels) { 
+
+                var newLabel = seriesLabels[i];
+
+                var newDatum = {};
+                newDatum['name'] = newLabel;
+                newDatum['color'] = palette.color();
+                newDatum['data'] = chartData[newLabel];
+                
+                seriesData.push(newDatum);
+            }
+
+
+
+            ///////////////////////
+            // Graph
+            //
+            // instantiate our graph!
+            //
+            var graph = new Rickshaw.Graph( {
+                element: document.getElementById("stack"),
+                width: 800,
+                height: 100,
+                renderer: 'area',
+                stroke: true,
+                offset: 'zero',
+                preserve: true,
+                series: seriesData, 
+                /*[
+                    {
                         color: palette.color(),
-                        data : chartData,
-                        name: 'unknown' 
-                    }];
+                        data: chartData,
+                        name: 'stack'
+                    },
+                ],*/
+                onComplete: function(transport) {
+                    console.log('all finished!');
+                    //var graph = transport.graph;
+                    //var detail = new Rickshaw.Graph.HoverDetail({ graph: graph });
+                }
+                
+            } );
 
-            graph.update();
-            */
+
+            var legend = new Rickshaw.Graph.Legend( {
+                    element: document.querySelector('#legend'),
+                    graph: graph
+            } );
+
+            
+            graph.render();
 
 
-
-
-            // ----------------
+            ///////////////////////
             // Annotations
             //
 
@@ -164,6 +150,25 @@ $(document).ready(function () {
 
             */
 
+            var ticksTreatment = 'glow';
+            
+            var xAxis = new Rickshaw.Graph.Axis.Time( {
+                graph: graph,
+                ticksTreatment: ticksTreatment,
+                timeFixture: new Rickshaw.Fixtures.Time.Local()
+            } );
+
+            xAxis.render();
+
+            var yAxis = new Rickshaw.Graph.Axis.Y( {
+                graph: graph,
+                tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+                ticksTreatment: ticksTreatment
+            } );
+
+            yAxis.render();
+
+
             /*
             var controls = new RenderControls( {
                 element: document.querySelector('form'),
@@ -207,13 +212,13 @@ $(document).ready(function () {
             });
             
             previewXAxis.render();
+            */
 
 
         } // all done 
 
     );
 
-            */
 
 });
 
