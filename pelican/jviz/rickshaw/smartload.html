@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% set mytitle="Rickshaw Smartload" %}
+
+{# ----------- title -------------- #}
+
+{% block title %}{{ mytitle }}{% endblock %}
+
+
+{# ----------- javascript going up front -------------- #}
+
+{% block head_scripts %}
+
+<script src="{{ SITEURL }}/theme/js/d3-3.5.17.js" type="text/javascript"></script>
+<script src="{{ SITEURL }}/theme/js/c3-0.1.33.js" type="text/javascript"></script>
+<script src="{{ SITEURL }}/theme/js/rickshaw-1.6.0.js" type="text/javascript"></script>
+
+<link href="{{ SITEURL }}/rickshaw/smartload.css" rel="stylesheet" type="text/css" />
+
+<link href="{{ SITEURL }}/theme/css/rickshaw.css" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+<style>
+/* css could go here too */
+</style>
+
+{# ----------- content ------------- #}
+
+{% block content %}
+
+
+
+<div class="row">
+
+
+
+    <div class="col-md-12">
+        <div id="smartload"></div>
+        <br />
+        <br />
+
+    </div>
+
+
+
+    <div class="col-md-6">
+        {% include 'smartload.md' %}
+    </div>
+
+
+
+    <div class="col-md-6">
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+                Panel content
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+<script src="{{ SITEURL }}/theme/js/jquery-1.11.2.js" type="text/javascript" ></script>
+<script src="{{ SITEURL }}/rickshaw/smartload.js" type="text/javascript"> </script>
+
+{% endblock %}
+
+

@@ -3,12 +3,12 @@
 #example1 { min-height: 155px; }
 
 span.title {
-    display: block;
+    /*display: block;*/
     text-color: #fff;
     /*background-color: rgba(0,0,0,0.5);*/
 }
 span.value {
-    display: block;
+    /*display: block;*/
     text-color: #fff;
     /*background-color: rgba(0,0,0,0.5);*/
 }

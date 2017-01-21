@@ -111,6 +111,15 @@ TEMPLATE_PAGES['rickshaw/reactor.html']   = 'rickshaw/reactor.html'
 TEMPLATE_PAGES['rickshaw/reactor.css']    = 'rickshaw/reactor.css'
 TEMPLATE_PAGES['rickshaw/reactor.js']     = 'rickshaw/reactor.js'
 
+TEMPLATE_PAGES['rickshaw/rickshaw_totalcpu.json']   = 'rickshaw/rickshaw_totalcpu.json'
+
+TEMPLATE_PAGES['rickshaw/smartphone.html']   = 'rickshaw/smartphone.html'
+TEMPLATE_PAGES['rickshaw/smartphone.css']    = 'rickshaw/smartphone.css'
+TEMPLATE_PAGES['rickshaw/smartphone.js']     = 'rickshaw/smartphone.js'
+
+TEMPLATE_PAGES['rickshaw/smartload.html']   = 'rickshaw/smartload.html'
+TEMPLATE_PAGES['rickshaw/smartload.css']    = 'rickshaw/smartload.css'
+TEMPLATE_PAGES['rickshaw/smartload.js']     = 'rickshaw/smartload.js'
 
 
 
