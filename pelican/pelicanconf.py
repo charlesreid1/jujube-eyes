@@ -51,42 +51,49 @@ EXTRA_TEMPLATES_PATHS = {}
 # ----------------8<-------------------------
 # pelican site files
 
-EXTRA_TEMPLATES_PATHS = ['jviz']
+EXTRA_TEMPLATES_PATHS = [
+                         'jviz',
+                         'jviz/c3',
+                         'jviz/cubism',
+                         ]
 
-TEMPLATE_PAGES['visualization1.html']   = 'visualization1.html'
-TEMPLATE_PAGES['visualization1.css']    = 'visualization1.css'
-TEMPLATE_PAGES['visualization1.js']     = 'visualization1.js'
+TEMPLATE_PAGES['c3/visualization1.html']   = 'c3/visualization1.html'
+TEMPLATE_PAGES['c3/visualization1.css']    = 'c3/visualization1.css'
+TEMPLATE_PAGES['c3/visualization1.js']     = 'c3/visualization1.js'
 
-TEMPLATE_PAGES['visualization2.json']   = 'visualization2.json'
-TEMPLATE_PAGES['visualization2.html']   = 'visualization2.html'
-TEMPLATE_PAGES['visualization2.css']    = 'visualization2.css'
-TEMPLATE_PAGES['visualization2.js']     = 'visualization2.js'
+TEMPLATE_PAGES['c3/visualization2.json']   = 'c3/visualization2.json'
+TEMPLATE_PAGES['c3/visualization2.html']   = 'c3/visualization2.html'
+TEMPLATE_PAGES['c3/visualization2.css']    = 'c3/visualization2.css'
+TEMPLATE_PAGES['c3/visualization2.js']     = 'c3/visualization2.js'
 
-TEMPLATE_PAGES['visualization3.json']   = 'visualization3.json'
-TEMPLATE_PAGES['visualization3.html']   = 'visualization3.html'
-TEMPLATE_PAGES['visualization3.css']    = 'visualization3.css'
-TEMPLATE_PAGES['visualization3.js']     = 'visualization3.js'
+TEMPLATE_PAGES['c3/visualization3.json']   = 'c3/visualization3.json'
+TEMPLATE_PAGES['c3/visualization3.html']   = 'c3/visualization3.html'
+TEMPLATE_PAGES['c3/visualization3.css']    = 'c3/visualization3.css'
+TEMPLATE_PAGES['c3/visualization3.js']     = 'c3/visualization3.js'
 
-TEMPLATE_PAGES['visualization4.json']   = 'visualization4.json'
-TEMPLATE_PAGES['visualization4.html']   = 'visualization4.html'
-TEMPLATE_PAGES['visualization4.css']    = 'visualization4.css'
-TEMPLATE_PAGES['visualization4.js']     = 'visualization4.js'
+TEMPLATE_PAGES['c3/visualization4.json']   = 'c3/visualization4.json'
+TEMPLATE_PAGES['c3/visualization4.html']   = 'c3/visualization4.html'
+TEMPLATE_PAGES['c3/visualization4.css']    = 'c3/visualization4.css'
+TEMPLATE_PAGES['c3/visualization4.js']     = 'c3/visualization4.js'
 
 TEMPLATE_PAGES['chartdata_all.json']   = 'chartdata_all.json'
-#TEMPLATE_PAGES['visualization5.json']   = 'visualization5.json'
-TEMPLATE_PAGES['visualization5.html']   = 'visualization5.html'
-TEMPLATE_PAGES['visualization5.css']    = 'visualization5.css'
-TEMPLATE_PAGES['visualization5.js']     = 'visualization5.js'
+#TEMPLATE_PAGES['c3/visualization5.json']   = 'c3/visualization5.json'
+TEMPLATE_PAGES['c3/visualization5.html']   = 'c3/visualization5.html'
+TEMPLATE_PAGES['c3/visualization5.css']    = 'c3/visualization5.css'
+TEMPLATE_PAGES['c3/visualization5.js']     = 'c3/visualization5.js'
 
-#TEMPLATE_PAGES['visualization6.json']   = 'visualization6.json'
-TEMPLATE_PAGES['visualization6.html']   = 'visualization6.html'
-TEMPLATE_PAGES['visualization6.css']    = 'visualization6.css'
-TEMPLATE_PAGES['visualization6.js']     = 'visualization6.js'
+#TEMPLATE_PAGES['c3/visualization6.json']   = 'c3/visualization6.json'
+TEMPLATE_PAGES['c3/visualization6.html']   = 'c3/visualization6.html'
+TEMPLATE_PAGES['c3/visualization6.css']    = 'c3/visualization6.css'
+TEMPLATE_PAGES['c3/visualization6.js']     = 'c3/visualization6.js'
 
 
 
-#TEMPLATE_PAGES['stuff.html'] = 'stuff.html'
-#TEMPLATE_PAGES['stuff.html'] = 'my_app/stuff.html'
+
+#TEMPLATE_PAGES['cubism/viz1.json']   = 'cubism/viz1.json'
+TEMPLATE_PAGES['cubism/viz1.html']   = 'cubism/viz1.html'
+TEMPLATE_PAGES['cubism/viz1.css']    = 'cubism/viz1.css'
+TEMPLATE_PAGES['cubism/viz1.js']     = 'cubism/viz1.js'
 
 
 

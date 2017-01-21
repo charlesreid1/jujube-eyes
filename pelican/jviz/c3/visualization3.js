@@ -13,12 +13,16 @@ $(document).ready(function () {
     //
     // ['label', 0, 1, 2, 3, 4, 5, ... ]
     // 
-    var key_value_json_to_c3bar_json = function(jsonData) {
+    var key_value_json_to_c3pie_json = function(jsonData) {
         var c3data = [];
         for(var i in jsonData){
             var key = i;
             var vec = jsonData[i];
 
+            
+            // strip out all except index 0 of vec 
+            vec = [vec[0]];
+            
             // prepend label to list
             vec.unshift(key);
             c3data.push(vec);
@@ -29,7 +33,7 @@ $(document).ready(function () {
     
     // Fetch JSON
     //
-    fetch('visualization4.json')
+    fetch('c3/visualization3.json')
         .then(function(response) {
             return response.json();
         })
@@ -38,24 +42,20 @@ $(document).ready(function () {
             // -------
             // Process the data
             //
-            var processed_data = key_value_json_to_c3bar_json(d);
+            var processed_data = key_value_json_to_c3pie_json(d);
     
+            console.log(processed_data);
+
             // -------
             // Make a C3 chart
             //
             var chart = c3.generate({
                 data: {
                     columns : processed_data,
-                    hide: true,
-                    type: 'bar'
+                    type: 'donut'
                 },
-                bar: {
-                    title: "Bar Chart: Countries",
-                    width: {
-                        ratio: 0.5 // this makes bar width 50% of length between ticks
-                    }
-                    // or
-                    //width: 100 // this makes bar width 100px
+                donut: {
+                    title: "Donuts: Countries"
                 }
             });
 
@@ -65,18 +65,27 @@ $(document).ready(function () {
             //
             // Set drop-down controls
 
+            /*
             $("#s1,#s2,#s3").change(function () {
                 var c1 = $("#s1").find('option:selected').val();
                 var c2 = $("#s2").find('option:selected').val();
                 var c3 = $("#s3").find('option:selected').val();
+                console.log(c1);
+                console.log(c2);
+                console.log(c3);
+                console.log('------');
 
                 chart.hide(null, {
                     withLegend: true
                 });
-                chart.show([c1,c2,c3], {
+                */
+                chart.show(null, {
                     withLegend: true
                 });
+                /*
             });
+            */
+
 
     
         });//end load json

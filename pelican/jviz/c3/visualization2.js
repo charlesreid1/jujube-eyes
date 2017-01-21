@@ -13,19 +13,15 @@ $(document).ready(function () {
     //
     // ['label', 0, 1, 2, 3, 4, 5, ... ]
     // 
-    var key_value_json_to_c3pie_json = function(jsonData) {
+    var key_value_json_to_c3_json = function(jsonData) {
         var c3data = [];
         for(var i in jsonData){
             var key = i;
-            var vec = jsonData[i];
-
-            
-            // strip out all except index 0 of vec 
-            vec = [vec[0]];
+            var val = jsonData[i];
             
             // prepend label to list
-            vec.unshift(key);
-            c3data.push(vec);
+            val.unshift(key);
+            c3data.push(val);
         }
         return c3data;
     }
@@ -33,7 +29,7 @@ $(document).ready(function () {
     
     // Fetch JSON
     //
-    fetch('visualization3.json')
+    fetch('c3/visualization2.json')
         .then(function(response) {
             return response.json();
         })
@@ -42,9 +38,8 @@ $(document).ready(function () {
             // -------
             // Process the data
             //
-            var processed_data = key_value_json_to_c3pie_json(d);
+            var processed_data = key_value_json_to_c3_json(d);
     
-            console.log(processed_data);
 
             // -------
             // Make a C3 chart
@@ -52,10 +47,10 @@ $(document).ready(function () {
             var chart = c3.generate({
                 data: {
                     columns : processed_data,
-                    type: 'donut'
+                    hide : true
                 },
-                donut: {
-                    title: "Donuts: Countries"
+                legend: {
+                    show: false
                 }
             });
 
@@ -65,7 +60,6 @@ $(document).ready(function () {
             //
             // Set drop-down controls
 
-            /*
             $("#s1,#s2,#s3").change(function () {
                 var c1 = $("#s1").find('option:selected').val();
                 var c2 = $("#s2").find('option:selected').val();
@@ -74,17 +68,13 @@ $(document).ready(function () {
                 console.log(c2);
                 console.log(c3);
                 console.log('------');
-
                 chart.hide(null, {
                     withLegend: true
                 });
-                */
-                chart.show(null, {
+                chart.show([c1, c2, c3], {
                     withLegend: true
                 });
-                /*
             });
-            */
 
 
     
