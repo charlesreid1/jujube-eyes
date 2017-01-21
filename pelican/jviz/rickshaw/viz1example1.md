@@ -1,5 +1,5 @@
 <h2>Rickshaw Time Series 1</h2>
 
-This is a sipmle time series visualization using Rickshaw.
+This is a simple time series visualization using Rickshaw.
 
 

@@ -20,6 +20,9 @@
 
 {% endblock %}
 
+<style>
+/* css could go here too */
+</style>
 
 {# ----------- content ------------- #}
 
@@ -62,10 +65,63 @@
 </div>
 
 
+<div class="row">
+
+    <div class="col-xs-6">
+
+        <div id="chart_container">
+
+            <div id="y_axis"></div>
+
+            <div id="example3"></div>
+
+        </div>
+
+        <br />
+        <br />
+
+    </div>
+
+    <div class="col-xs-6">
+        {% include 'viz1example3.md' %}
+    </div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="col-xs-6">
+
+        <div id="chart_container4">
+
+            <div id="y_axis"></div>
+
+            <div id="example4"></div>
+
+        </div>
+
+        <div id="legend"></div>
+
+
+        <br />
+        <br />
+
+    </div>
+
+    <div class="col-xs-6">
+        {% include 'viz1example4.md' %}
+    </div>
+
+</div>
+
+
+
 <script src="{{ SITEURL }}/theme/js/jquery-1.11.2.js" type="text/javascript" ></script>
-<script src="{{ SITEURL }}/rickshaw/viz1.js" type="text/javascript"> </script>
-
-
+<script src="{{ SITEURL }}/rickshaw/viz1example1.js" type="text/javascript"> </script>
+<script src="{{ SITEURL }}/rickshaw/viz1example2.js" type="text/javascript"> </script>
+<script src="{{ SITEURL }}/rickshaw/viz1example3.js" type="text/javascript"> </script>
+<script src="{{ SITEURL }}/rickshaw/viz1example4.js" type="text/javascript"> </script>
 
 {% endblock %}
 

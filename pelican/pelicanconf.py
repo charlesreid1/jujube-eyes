@@ -98,7 +98,35 @@ TEMPLATE_PAGES['cubism/viz1.js']     = 'cubism/viz1.js'
 
 TEMPLATE_PAGES['rickshaw/viz1.html']   = 'rickshaw/viz1.html'
 TEMPLATE_PAGES['rickshaw/viz1.css']    = 'rickshaw/viz1.css'
-TEMPLATE_PAGES['rickshaw/viz1.js']     = 'rickshaw/viz1.js'
+TEMPLATE_PAGES['rickshaw/viz1example1.js']     = 'rickshaw/viz1example1.js'
+TEMPLATE_PAGES['rickshaw/viz1example2.js']     = 'rickshaw/viz1example2.js'
+TEMPLATE_PAGES['rickshaw/viz1example3.js']     = 'rickshaw/viz1example3.js'
+TEMPLATE_PAGES['rickshaw/viz1example4.js']     = 'rickshaw/viz1example4.js'
+
+
+
+
+
+TEMPLATE_PAGES['rickshaw/reactor.html']   = 'rickshaw/reactor.html'
+TEMPLATE_PAGES['rickshaw/reactor.css']    = 'rickshaw/reactor.css'
+TEMPLATE_PAGES['rickshaw/reactor.js']     = 'rickshaw/reactor.js'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
