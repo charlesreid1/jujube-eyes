@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% set mytitle="Cubism Visualization" %}
+
+{# ----------- title -------------- #}
+
+{% block title %}{{ mytitle }}{% endblock %}
+
+
+{# ----------- javascript going up front -------------- #}
+
+{% block head_scripts %}
+
+<script src="{{ SITEURL }}/theme/js/jquery-1.11.2.js" type="text/javascript" ></script>
+
+<script src="{{ SITEURL }}/theme/js/d3-3.5.17.js" type="text/javascript"></script>
+<script src="{{ SITEURL }}/theme/js/c3-0.1.33.js" type="text/javascript"></script>
+<script src="{{ SITEURL }}/theme/js/cubism.v1.js" type="text/javascript"></script>
+
+<link href="{{ SITEURL }}/cubism/deathages.css" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+
+{# ----------- content ------------- #}
+
+{% block content %}
+
+<div class="row">
+
+
+
+    <div class="col-xs-6">
+
+        <div id="example1"></div>
+
+        <br />
+        <br />
+
+    </div>
+
+    <div class="col-xs-4">
+        {% include 'deathages.md' %}
+    </div>
+
+
+
+</div>
+
+
+<script src="{{ SITEURL }}/cubism/deathages.js" type="text/javascript"> </script>
+
+
+{% endblock %}
+
+
