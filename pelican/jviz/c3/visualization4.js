@@ -29,7 +29,7 @@ $(document).ready(function () {
     
     // Fetch JSON
     //
-    fetch('c3/visualization4.json')
+    fetch('/c3/visualization4.json')
         .then(function(response) {
             return response.json();
         })

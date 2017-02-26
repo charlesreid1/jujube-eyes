@@ -96,6 +96,14 @@ TEMPLATE_PAGES['cubism/viz1.js']     = 'cubism/viz1.js'
 
 
 
+TEMPLATE_PAGES['cubism/deathages.json']   = 'cubism/deathages.json'
+TEMPLATE_PAGES['cubism/deathages.html']   = 'cubism/deathages.html'
+TEMPLATE_PAGES['cubism/deathages.css']    = 'cubism/deathages.css'
+TEMPLATE_PAGES['cubism/deathages.js']     = 'cubism/deathages.js'
+
+
+
+
 TEMPLATE_PAGES['rickshaw/viz1.html']   = 'rickshaw/viz1.html'
 TEMPLATE_PAGES['rickshaw/viz1.css']    = 'rickshaw/viz1.css'
 TEMPLATE_PAGES['rickshaw/viz1example1.js']     = 'rickshaw/viz1example1.js'
