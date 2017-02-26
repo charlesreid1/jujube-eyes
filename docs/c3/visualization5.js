@@ -185,7 +185,7 @@ $(document).ready(function () {
     // The function handle will filter data and chart it.
     // Then we use the first code, and filter data and chart it.
     //
-    fetch('chartdata_all.json')
+    fetch('/chartdata_all.json')
 
         .then(function(response) {
             return response.json();

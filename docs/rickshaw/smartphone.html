@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Rickshaw Visualization</title>
+        <title>Rickshaw Smartphone</title>
         <meta charset="utf-8" />
 
         <link href="/theme/css/bootstrap.css"      rel="stylesheet" type="text/css">
@@ -26,8 +26,9 @@
 <script src="/theme/js/c3-0.1.33.js" type="text/javascript"></script>
 <script src="/theme/js/rickshaw-1.6.0.js" type="text/javascript"></script>
 
+<link href="/rickshaw/smartphone.css" rel="stylesheet" type="text/css" />
+
 <link href="/theme/css/rickshaw.css" rel="stylesheet" type="text/css" />
-<link href="/rickshaw/viz1.css" rel="stylesheet" type="text/css" />
 
 
 </head>
@@ -42,107 +43,64 @@
 
 
 
-<div class="row">
-
-    <div class="col-xs-6">
-
-        <div id="example1"></div>
-
-        <br />
-        <br />
-
-    </div>
-
-    <div class="col-xs-6">
-<h2>Rickshaw Time Series 1</h2>
-
-This is a simple time series visualization using Rickshaw.
-
-    </div>
-
-</div>
-
 
 <div class="row">
 
-    <div class="col-xs-6">
 
-        <div id="example2"></div>
 
-        <br />
-        <br />
+    <div class="col-md-12">
+<h2>Smartphone Time Series</h2>
 
+This Rickshaw.js chart visualizes a time series of total CPU usage on a smartphone.
+The data consists of approximately 2 weeks of data, polled every 5 seconds, so the 
+data set is huge. This is down-sampled using Python and exported to an appropriate 
+format. The data are stored in a JSON file that looks like this: 
+
+<pre>
+    [
+        {"y": 60.029761999999998,   "x": 1462793200},
+        {"y": 4.6590910000000001,   "x": 1462793464},
+        {"y": 4.0687655999999999,   "x": 1462793726},
+        {"y": 39.323672999999999,   "x": 1462793989},
+        {"y": 0.0,                  "x": 1462794266},
+        {"y": 0.0,                  "x": 1462794642},
+        {"y": 5.381653,             "x": 1462794996},
+        {"y": 50.717700000000001,   "x": 1462795370},
+
+        ...
+
+    ]
+</pre>
+
+The Javascript page starts by loading the JSON data, and then draws the chart. 
     </div>
 
-    <div class="col-xs-6">
-<h2>Rickshaw Time Series 2</h2>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
-This is another visualization using Rickshaw.
-    </div>
+    <div class="col-md-12">
 
-</div>
-
-
-<div class="row">
-
-    <div class="col-xs-6">
-
-        <div id="chart_container">
-
-            <div id="y_axis"></div>
-
-            <div id="example3"></div>
-
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Total CPU Usage</h3>
+            </div>
+            <div class="panel-body">
+                <div id="smartphone">
+            </div>
         </div>
 
-        <br />
-        <br />
-
     </div>
 
-    <div class="col-xs-6">
-<h2>Rickshaw Time Series 3</h2>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
-Adding a y-axis to the time series visualization. 
-    </div>
-
-</div>
-
-
-<div class="row">
-
-    <div class="col-xs-6">
-
-        <div id="chart_container4">
-
-            <div id="y_axis"></div>
-
-            <div id="example4"></div>
-
-        </div>
-
-        <div id="legend"></div>
-
-
-        <br />
-        <br />
-
-    </div>
-
-    <div class="col-xs-6">
-<h2>Rickshaw Time Series 4</h2>
-
-And now... a multiseries plot with a legend.    </div>
 
 </div>
 
 
 
 <script src="/theme/js/jquery-1.11.2.js" type="text/javascript" ></script>
-<script src="/rickshaw/viz1example1.js" type="text/javascript"> </script>
-<script src="/rickshaw/viz1example2.js" type="text/javascript"> </script>
-<script src="/rickshaw/viz1example3.js" type="text/javascript"> </script>
-<script src="/rickshaw/viz1example4.js" type="text/javascript"> </script>
+<script src="/rickshaw/smartphone.js" type="text/javascript"> </script>
 
 
     </div>

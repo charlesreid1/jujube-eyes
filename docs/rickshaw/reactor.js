@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     var graph = new Rickshaw.Graph( {
         element: document.getElementById("reactor"),
-        width: 400,
+        width: 500,
         height: 200,
         renderer: 'area',
         stroke: true,
@@ -67,7 +67,18 @@ $(document).ready(function () {
                 data: seriesData[6],
                 name: 'O2'
             }
-        ]
+        ],
+        onComplete: function(transport) {
+            console.log('all finished!');
+            //var graph = transport.graph;
+            //var detail = new Rickshaw.Graph.HoverDetail({ graph: graph });
+        }
+        
+    } );
+
+    var legend = new Rickshaw.Graph.Legend( {
+        graph: graph,
+        element: document.querySelector('#legend'),
     } );
     
     graph.render();
@@ -97,11 +108,6 @@ $(document).ready(function () {
         element: document.getElementById('timeline')
     } );
     
-    var legend = new Rickshaw.Graph.Legend( {
-        graph: graph,
-        element: document.getElementById('legend')
-    
-    } );
     
     var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
         graph: graph,
@@ -169,7 +175,7 @@ $(document).ready(function () {
         random.addData(seriesData);
         graph.update();
     
-    }, 90000 );
+    }, 3000 );
     
     /*
     function addAnnotation(force) {
