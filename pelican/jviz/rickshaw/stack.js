@@ -68,7 +68,7 @@ $(document).ready(function () {
             //
             var graph = new Rickshaw.Graph( {
                 element: document.getElementById("stack"),
-                width: 800,
+                width: 600,
                 height: 100,
                 renderer: 'area',
                 stroke: true,

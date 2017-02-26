@@ -5,3 +5,13 @@
 div.title {
     color: #ddd;
 }
+.label {
+    display: inline-block;
+}
+.line {
+    display: inline-block;
+    margin: 0 -10px 0 0;
+}
+#legend {
+    width: 800;
+}

@@ -47,10 +47,11 @@ $(document).ready(function () {
             // instantiate our graph!
             //
 
+            var chartWidth = document.getElementById("smartphone").clientWidth;
 
             var graph = new Rickshaw.Graph( {
                 element: document.getElementById("smartphone"),
-                width: 800,
+                width: chartWidth,
                 height: 100,
                 renderer: 'area',
                 stroke: true,

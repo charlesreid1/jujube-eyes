@@ -32,27 +32,42 @@
 
 <div class="row">
 
-    <div class="col-xs-6">
 
-        <div id="reactor"></div>
 
-        <br />
-        <br />
+    <div class="col-md-12">
 
         <div class="panel panel-info">
             <div class="panel-heading">
-                <h3 class="panel-title">Panel title</h3>
+                <h3 class="panel-title">Live Chemical Reactor Species Data</h3>
             </div>
             <div class="panel-body">
-                Panel content
+
+                <div id="chart_container">
+                    <div id="y_axis"></div>
+                    <div id="reactor"></div>
+                </div>
+                <div id="legend"></div>
+
             </div>
         </div>
 
     </div>
 
-    <div class="col-xs-6">
+
+
+</div>
+<div class="row">
+
+
+
+    <div class="col-md-12">
+        <div>
+        </div>
         {% include 'reactor.md' %}
     </div>
+
+
+
 
 </div>
 
