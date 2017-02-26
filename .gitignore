@@ -1,0 +1,4 @@
+*.pyc
+maps/
+memo
+pelicanconf.pyc
